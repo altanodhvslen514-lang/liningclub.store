@@ -12,6 +12,90 @@
       color: #222;
     }
     header {
+<!-- Slideshow эхлэл -->
+<div class="slideshow-container">
+  <div class="slide fade">
+    <img src="https://img.lining.com/image/sku/ABAR079-1/ABAR079-1-1.jpg" alt="Li-Ning Way of Wade" class="slide-img">
+    <div class="slide-caption">Li-Ning Way of Wade – Дээд зэрэглэлийн спорт пүүз</div>
+  </div>
+  <div class="slide fade">
+    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7e5d1cf0-0e4d-4e29-88b7-7abf38d1e9bf/air-jordan-1-low-og-shoes.png" alt="Jordan 1 Low OG" class="slide-img">
+    <div class="slide-caption">Jordan 1 Low OG – Сонгодог үүрд мөнх загвар</div>
+  </div>
+  <div class="slide fade">
+    <img src="https://www.kicksonfire.com/wp-content/uploads/2023/06/Li-Ning-Way-of-Wade-10-White-Black-1.jpg" alt="Way of Wade 10" class="slide-img">
+    <div class="slide-caption">Way of Wade 10 – Удаан эдэлгээ, хурдны гайхамшиг</div>
+  </div>
+  <div class="slide fade">
+    <img src="https://img.lining.com/image/sku/ABAP027-1/ABAP027-1-1.jpg" alt="Li-Ning Basketball" class="slide-img">
+    <div class="slide-caption">Li-Ning Basketball – Өдөр тутам болон спортод</div>
+  </div>
+  <div class="slide fade">
+    <img src="https://images.unsplash.com/photo-1517263904808-5dc0d6a1df19?auto=format&fit=crop&w=800&q=80" alt="Street Sneaker" class="slide-img">
+    <div class="slide-caption">Street Sneaker – Өдөр тутмын хэв маяг</div>
+  </div>
+</div>
+<!-- Slideshow дуусгав -->
+
+<style>
+.slideshow-container {
+  position: relative;
+  max-width: 900px;
+  margin: 32px auto 28px auto;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 6px 32px #0277bd33;
+  background: #fff;
+}
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.slide-img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  background: #f5fafd;
+}
+.slide-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  background: rgba(2, 119, 189, 0.75);
+  color: #fff;
+  font-size: 25px;
+  padding: 14px 0 8px 0;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  text-shadow: 0 2px 8px #2226;
+}
+@media (max-width: 700px) {
+  .slideshow-container { max-width: 98vw; }
+  .slide-caption { font-size: 18px; }
+}
+</style>
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2800); // 2.8 секунд тутамд эргэнэ
+}
+</script>
       background: #0277bd;
       color: #fff;
       padding: 20px 40px;
