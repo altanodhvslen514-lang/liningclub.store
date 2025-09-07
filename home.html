@@ -12,90 +12,6 @@
       color: #222;
     }
     header {
-<!-- Slideshow эхлэл -->
-<div class="slideshow-container">
-  <div class="slide fade">
-    <img src="https://img.lining.com/image/sku/ABAR079-1/ABAR079-1-1.jpg" alt="Li-Ning Way of Wade" class="slide-img">
-    <div class="slide-caption">Li-Ning Way of Wade – Дээд зэрэглэлийн спорт пүүз</div>
-  </div>
-  <div class="slide fade">
-    <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7e5d1cf0-0e4d-4e29-88b7-7abf38d1e9bf/air-jordan-1-low-og-shoes.png" alt="Jordan 1 Low OG" class="slide-img">
-    <div class="slide-caption">Jordan 1 Low OG – Сонгодог үүрд мөнх загвар</div>
-  </div>
-  <div class="slide fade">
-    <img src="https://www.kicksonfire.com/wp-content/uploads/2023/06/Li-Ning-Way-of-Wade-10-White-Black-1.jpg" alt="Way of Wade 10" class="slide-img">
-    <div class="slide-caption">Way of Wade 10 – Удаан эдэлгээ, хурдны гайхамшиг</div>
-  </div>
-  <div class="slide fade">
-    <img src="https://img.lining.com/image/sku/ABAP027-1/ABAP027-1-1.jpg" alt="Li-Ning Basketball" class="slide-img">
-    <div class="slide-caption">Li-Ning Basketball – Өдөр тутам болон спортод</div>
-  </div>
-  <div class="slide fade">
-    <img src="https://images.unsplash.com/photo-1517263904808-5dc0d6a1df19?auto=format&fit=crop&w=800&q=80" alt="Street Sneaker" class="slide-img">
-    <div class="slide-caption">Street Sneaker – Өдөр тутмын хэв маяг</div>
-  </div>
-</div>
-<!-- Slideshow дуусгав -->
-
-<style>
-.slideshow-container {
-  position: relative;
-  max-width: 900px;
-  margin: 32px auto 28px auto;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 6px 32px #0277bd33;
-  background: #fff;
-}
-.slide {
-  display: none;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-}
-.slide-img {
-  width: 100%;
-  max-height: 340px;
-  object-fit: cover;
-  background: #f5fafd;
-}
-.slide-caption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 14px;
-  background: rgba(2, 119, 189, 0.75);
-  color: #fff;
-  font-size: 25px;
-  padding: 14px 0 8px 0;
-  font-weight: 600;
-  letter-spacing: 2px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  text-shadow: 0 2px 8px #2226;
-}
-@media (max-width: 700px) {
-  .slideshow-container { max-width: 98vw; }
-  .slide-caption { font-size: 18px; }
-}
-</style>
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2800); // 2.8 секунд тутамд эргэнэ
-}
-</script>
       background: #0277bd;
       color: #fff;
       padding: 20px 40px;
@@ -125,6 +41,56 @@ function showSlides() {
     nav a:hover {
       text-decoration: underline;
     }
+
+    /* SLIDESHOW */
+    .slideshow-container {
+      position: relative;
+      max-width: 900px;
+      margin: 32px auto 30px auto;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 6px 32px #0277bd33;
+      background: #fff;
+      min-height: 320px;
+    }
+    .slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      left: 0; top: 0;
+    }
+    .slide-img {
+      width: 100%;
+      max-height: 340px;
+      object-fit: cover;
+      background: #f5fafd;
+      display: block;
+      margin: 0 auto;
+    }
+    .slide-caption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 14px;
+      background: rgba(2, 119, 189, 0.75);
+      color: #fff;
+      font-size: 25px;
+      padding: 14px 0 8px 0;
+      font-weight: 600;
+      letter-spacing: 2px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      text-shadow: 0 2px 8px #2226;
+    }
+    @media (max-width: 700px) {
+      .slideshow-container { max-width: 98vw; min-height: 130px; }
+      .slide-caption { font-size: 17px; }
+      .slide-img { max-height: 160px; }
+    }
+
+    /* Бусад хуудсын CSS-үүд ... */
     .hero {
       text-align: center;
       padding: 40px 10px 25px 10px;
@@ -250,72 +216,63 @@ function showSlides() {
       <a href="login.html">Log in</a>
     </nav>
   </header>
+
+  <!-- SLIDESHOW ЭНД -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="https://img.lining.com/image/sku/ABAR079-1/ABAR079-1-1.jpg" alt="Li-Ning Way of Wade" class="slide-img">
+      <div class="slide-caption">Li-Ning Way of Wade – Дээд зэрэглэлийн спорт пүүз</div>
+    </div>
+    <div class="slide fade">
+      <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7e5d1cf0-0e4d-4e29-88b7-7abf38d1e9bf/air-jordan-1-low-og-shoes.png" alt="Jordan 1 Low OG" class="slide-img">
+      <div class="slide-caption">Jordan 1 Low OG – Сонгодог үүрд мөнх загвар</div>
+    </div>
+    <div class="slide fade">
+      <img src="https://www.kicksonfire.com/wp-content/uploads/2023/06/Li-Ning-Way-of-Wade-10-White-Black-1.jpg" alt="Way of Wade 10" class="slide-img">
+      <div class="slide-caption">Way of Wade 10 – Удаан эдэлгээ, хурдны гайхамшиг</div>
+    </div>
+    <div class="slide fade">
+      <img src="https://img.lining.com/image/sku/ABAP027-1/ABAP027-1-1.jpg" alt="Li-Ning Basketball" class="slide-img">
+      <div class="slide-caption">Li-Ning Basketball – Өдөр тутам болон спортод</div>
+    </div>
+    <div class="slide fade">
+      <img src="https://images.unsplash.com/photo-1517263904808-5dc0d6a1df19?auto=format&fit=crop&w=800&q=80" alt="Street Sneaker" class="slide-img">
+      <div class="slide-caption">Street Sneaker – Өдөр тутмын хэв маяг</div>
+    </div>
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 2800);
+    }
+  </script>
+  <!-- SLIDESHOW ДУУСАВ -->
+
   <div class="hero">
     <h1>Li-Ning Хувцас & Пүүз</h1>
     <p>Загварлаг, чанартай, шинэлэг сонголтуудыг эндээс!</p>
   </div>
   <section class="products-section">
-    <!-- Пүүз -->
+    <!-- Доорхыг жишээ болгож үлдээв, өөр бараа нэмэж болно -->
     <div class="product-card">
       <img class="product-img" src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler 3">
       <div class="product-info">
         <div class="product-name">Jimmy Butler 3</div>
         <div class="product-desc">Өндөр зэрэглэлийн сагсан бөмбөгийн пүүз.</div>
         <div class="product-price">₮329,000</div>
-        <button class="buy-btn">Сагслах</button>
+        <button class="buy-btn" onclick="window.location.href='cart.html'">Сагслах</button>
       </div>
     </div>
-    <!-- Хөнгөн куртик -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/6Nw7p8j/lining-jacket.png" alt="Li-Ning Jacket">
-      <div class="product-info">
-        <div class="product-name">Li-Ning Хөнгөн Куртик</div>
-        <div class="product-desc">Ямар ч улиралд тохирох, эвтэйхэн, загварлаг.</div>
-        <div class="product-price">₮199,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- TRS-1 пүүз -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/2hXG4kK/lining-trs1.png" alt="Li-Ning TRS-1">
-      <div class="product-info">
-        <div class="product-name">TRS-1 Пүүз</div>
-        <div class="product-desc">Хөнгөн, удаан эдэлгээтэй гүйлтийн пүүз.</div>
-        <div class="product-price">₮259,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Хөлбөмбөгийн өмд -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/YQ5kLh7/lining-pants.png" alt="Li-Ning Pants">
-      <div class="product-info">
-        <div class="product-name">Li-Ning Хөлбөмбөгийн өмд</div>
-        <div class="product-desc">Спортын болон өдөр тутмын өмсгөл.</div>
-        <div class="product-price">₮109,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Хөвөн цамц -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/3pBrq1L/lining-tshirt.png" alt="Li-Ning T-shirt">
-      <div class="product-info">
-        <div class="product-name">Li-Ning T-Shirt</div>
-        <div class="product-desc">Байгальд ээлтэй, хөвөн даавуун материалтай.</div>
-        <div class="product-price">₮59,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Эмэгтэй пүүз -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/1m4ptjB/lining-womenshoe.png" alt="Li-Ning Women's Sneaker">
-      <div class="product-info">
-        <div class="product-name">Li-Ning Эмэгтэй Пүүз</div>
-        <div class="product-desc">Зөөлөн ултай, хөнгөн, өдөр тутмын өмсгөл.</div>
-        <div class="product-price">₮199,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Дурын илүү сонголтууд энд давтаж оруулж болно -->
+    <!-- бусад барааны картууд ... -->
   </section>
 </body>
 </html>
