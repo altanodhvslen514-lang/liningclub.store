@@ -11,53 +11,44 @@
       background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
       color: #000;
     }
-
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
     }
-
     .logo {
       display: flex;
       align-items: center;
       font-weight: bold;
       font-size: 18px;
     }
-
     .logo img {
       height: 25px;
       margin-right: 8px;
     }
-
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #000;
       font-weight: 500;
     }
-
     .hero {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 50px;
     }
-
     .hero-text {
       max-width: 500px;
     }
-
     .hero-text h1 {
       font-size: 50px;
       margin-bottom: 20px;
     }
-
     .buttons {
       margin-top: 20px;
     }
-
     .buttons a {
       display: inline-block;
       padding: 12px 25px;
@@ -67,114 +58,38 @@
       text-decoration: none;
       transition: 0.3s;
     }
-
     .btn-primary {
       background: #fff;
       color: #000;
       border: 2px solid #000;
     }
-
     .btn-primary:hover {
       background: #000;
       color: #fff;
     }
-
     .btn-secondary {
       background: #e0f7fa;
       color: #000;
       border: 2px solid transparent;
     }
-
     .btn-secondary:hover {
       background: #000;
       color: #fff;
     }
-
     .hero img {
       max-width: 450px;
       animation: float 3s ease-in-out infinite;
     }
-
     @keyframes float {
       0% { transform: translateY(0px); }
       50% { transform: translateY(-15px); }
       100% { transform: translateY(0px); }
     }
-
-    /* Registration form styles */
-    #signup {
-      max-width: 500px;
-      margin: 60px auto;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #b3e5fc44;
-      padding: 32px;
-    }
-
-    #signup h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #0277bd;
-    }
-
-    #signup label {
-      display: block;
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-
-    #signup input, #signup select, #signup textarea {
-      width: 100%;
-      padding: 8px;
-      margin: 6px 0 15px 0;
-      border: 1px solid #b3e5fc;
-      border-radius: 4px;
-      font-size: 16px;
-      box-sizing: border-box;
-    }
-
-    #signup textarea {
-      min-height: 70px;
-      resize: vertical;
-    }
-
-    #signup button {
-      width: 100%;
-      padding: 12px 0;
-      border-radius: 25px;
-      background: #0277bd;
-      color: #fff;
-      border: none;
-      font-weight: bold;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    #signup button:hover {
-      background: #015684;
-    }
-
-    .success-message {
-      padding: 20px;
-      background: #e0f7fa;
-      color: #0277bd;
-      border-radius: 10px;
-      text-align: center;
-      font-size: 22px;
-      margin-bottom: 18px;
-      border: 2px solid #b3e5fc;
-      font-weight: bold;
-      display: none;
-      /* By default, hidden */
-    }
-
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
         text-align: center;
       }
-
       .hero img {
         margin-top: 30px;
         width: 90%;
@@ -183,7 +98,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <div class="logo">
       <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Li-Ning_logo.svg/512px-Li-Ning_logo.svg.png" alt="Li-Ning Logo">
@@ -195,72 +109,15 @@
       <a href="#">Store</a>
     </nav>
   </header>
-
   <section class="hero">
     <div class="hero-text">
       <h1>Li-Ning<br>Jimmy Butler 3</h1>
       <div class="buttons">
-        <a href="#signup" class="btn-primary">Get Start</a>
+        <a href="registration.html" class="btn-primary">Get Start</a>
         <a href="#" class="btn-secondary">Buy Now</a>
       </div>
     </div>
     <img src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler Shoe">
   </section>
-
-  <!-- Registration Form Section -->
-  <section id="signup">
-    <div class="success-message" id="success-message">
-      Бүртгэл амжилттай 🎉🤗
-    </div>
-    <h2>Sign Up</h2>
-    <form id="signup-form" autocomplete="off">
-      <label>И-мэйл:
-        <input type="email" name="email" required>
-      </label>
-      <label>Утасны дугаар:
-        <input type="tel" name="phone" required>
-      </label>
-      <label>Нэр:
-        <input type="text" name="firstname" required>
-      </label>
-      <label>Овог:
-        <input type="text" name="lastname" required>
-      </label>
-      <label>Нууц үг:
-        <input type="password" name="password" required>
-      </label>
-      <label>Хот / Аймаг:
-        <input type="text" name="city" required>
-      </label>
-      <label>Дүүрэг:
-        <input type="text" name="district" required>
-      </label>
-      <label>Гэрийн хаяг:
-        <input type="text" name="address" required>
-      </label>
-      <label>Дэлгэрэнгүй хариулах:
-        <textarea name="details" placeholder="Дэлгэрэнгүй мэдээлэл бичнэ үү..."></textarea>
-      </label>
-      <button type="submit">Бүртгүүлэх</button>
-    </form>
-  </section>
-
-  <script>
-    // Sign Up form submission handler
-    document.getElementById('signup-form').addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevent real submission
-
-      // Hide the form
-      this.style.display = 'none';
-
-      // Show the success message
-      document.getElementById('success-message').style.display = 'block';
-    });
-  </script>
-
 </body>
 </html>
-<div class="buttons">
-  <a href="registration.html" class="btn-primary">Get Start</a>
-  <a href="#" class="btn-secondary">Buy Now</a>
-</div>
