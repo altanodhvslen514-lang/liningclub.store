@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Li-Ning Club</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
+      color: #000;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .logo img {
+      height: 25px;
+      margin-right: 8px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 50px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 25px;
+      margin-right: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #fff;
+      color: #000;
+      border: 2px solid #000;
+    }
+
+    .btn-primary:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .btn-secondary {
+      background: #e0f7fa;
+      color: #000;
+      border: 2px solid transparent;
+    }
+
+    .btn-secondary:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    .hero img {
+      max-width: 450px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        margin-top: 30px;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Li-Ning_logo.svg/512px-Li-Ning_logo.svg.png" alt="Li-Ning Logo">
+      Li-Ning Club
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">New arrivals</a>
+      <a href="#">Store</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Li-Ning<br>Jimmy Butler 3</h1>
+      <div class="buttons">
+        <a href="#" class="btn-primary">Get Start</a>
+        <a href="#" class="btn-secondary">Buy Now</a>
+      </div>
+    </div>
+    <img src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler Shoe">
+  </section>
+
+</body>
+</html>
