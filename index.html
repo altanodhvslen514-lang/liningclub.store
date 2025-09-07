@@ -123,13 +123,19 @@
       font-weight: 500;
     }
 
-    #signup input {
+    #signup input, #signup select, #signup textarea {
       width: 100%;
       padding: 8px;
       margin: 6px 0 15px 0;
       border: 1px solid #b3e5fc;
       border-radius: 4px;
       font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    #signup textarea {
+      min-height: 70px;
+      resize: vertical;
     }
 
     #signup button {
@@ -191,17 +197,32 @@
   <section id="signup">
     <h2>Sign Up</h2>
     <form>
-      <label>Нэр:<br>
-        <input type="text" name="name" required>
-      </label>
-      <label>И-мэйл:<br>
+      <label>И-мэйл:
         <input type="email" name="email" required>
       </label>
-      <label>Утасны дугаар:<br>
+      <label>Утасны дугаар:
         <input type="tel" name="phone" required>
       </label>
-      <label>Гэрийн хаяг:<br>
+      <label>Нэр:
+        <input type="text" name="firstname" required>
+      </label>
+      <label>Овог:
+        <input type="text" name="lastname" required>
+      </label>
+      <label>Нууц үг:
+        <input type="password" name="password" required>
+      </label>
+      <label>Хот / Аймаг:
+        <input type="text" name="city" required>
+      </label>
+      <label>Дүүрэг:
+        <input type="text" name="district" required>
+      </label>
+      <label>Гэрийн хаяг:
         <input type="text" name="address" required>
+      </label>
+      <label>Дэлгэрэнгүй хариулах:
+        <textarea name="details" placeholder="Дэлгэрэнгүй мэдээлэл бичнэ үү..."></textarea>
       </label>
       <button type="submit">Бүртгүүлэх</button>
     </form>
