@@ -16,6 +16,9 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 50px;
+      position: relative;
+      z-index: 10;
+      background: transparent;
     }
     .logo {
       display: flex;
@@ -27,11 +30,74 @@
       height: 25px;
       margin-right: 8px;
     }
+    nav {
+      display: flex;
+      align-items: center;
+    }
     nav a {
       margin: 0 15px;
       text-decoration: none;
       color: #000;
       font-weight: 500;
+      transition: 0.2s;
+    }
+
+    /* Hamburger icon */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      width: 28px;
+      height: 23px;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    .bar {
+      height: 4px;
+      width: 100%;
+      background: #0277bd;
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 900px) {
+      header {
+        padding: 20px 15px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        right: -220px;
+        height: 100vh;
+        width: 200px;
+        background: #fff;
+        box-shadow: -3px 0 18px #0277bd22;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 70px 0 0 30px;
+        transition: right 0.3s;
+        z-index: 99;
+      }
+      nav.open {
+        right: 0;
+      }
+      nav a {
+        margin: 22px 0;
+        font-size: 18px;
+        color: #0277bd;
+      }
+      .hamburger {
+        display: flex;
+      }
+    }
+    @media (max-width: 600px) {
+      .hero {
+        padding: 25px 5px;
+      }
+      .hero-text h1 {
+        font-size: 32px;
+      }
     }
     .hero {
       display: flex;
@@ -95,21 +161,38 @@
         width: 90%;
       }
     }
+    /* nav-г гарны цохилтоор хаах overlay */
+    .nav-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.25);
+      z-index: 80;
+    }
+    .nav-overlay.show {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <img src="C:\Users\-----------------pc\Pictures" alt="logo.png">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Li-Ning_logo.svg/512px-Li-Ning_logo.svg.png" alt="logo.png">
       Li-Ning Club
     </div>
-    <nav>
-  <a href="home.html">Home</a>
-  <a href="#">New arrivals</a>
-  <a href="#">Store</a>
-  <a href="registration.html">Sign Up</a>
-  <a href="login.html">Log in</a>
+    <div class="hamburger" id="hamburger" aria-label="Цэс нээх" tabindex="0">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <nav id="mainNav">
+      <a href="home.html">Home</a>
+      <a href="#">New arrivals</a>
+      <a href="#">Store</a>
+      <a href="registration.html">Sign Up</a>
+      <a href="login.html">Log in</a>
     </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
   </header>
   <section class="hero">
     <div class="hero-text">
@@ -121,5 +204,33 @@
     </div>
     <img src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler Shoe">
   </section>
+  <script>
+    // Hamburger menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mainNav = document.getElementById('mainNav');
+    const navOverlay = document.getElementById('navOverlay');
+
+    function openNav() {
+      mainNav.classList.add('open');
+      navOverlay.classList.add('show');
+    }
+    function closeNav() {
+      mainNav.classList.remove('open');
+      navOverlay.classList.remove('show');
+    }
+
+    hamburger.addEventListener('click', openNav);
+    hamburger.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') openNav();
+    });
+    navOverlay.addEventListener('click', closeNav);
+
+    // Escape key to close nav
+    document.addEventListener('keydown', function(e) {
+      if ((e.key === 'Escape' || e.key === 'Esc') && mainNav.classList.contains('open')) {
+        closeNav();
+      }
+    });
+  </script>
 </body>
 </html>
