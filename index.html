@@ -155,6 +155,20 @@
       background: #015684;
     }
 
+    .success-message {
+      padding: 20px;
+      background: #e0f7fa;
+      color: #0277bd;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      border: 2px solid #b3e5fc;
+      font-weight: bold;
+      display: none;
+      /* By default, hidden */
+    }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -195,8 +209,11 @@
 
   <!-- Registration Form Section -->
   <section id="signup">
+    <div class="success-message" id="success-message">
+      Бүртгэл амжилттай 🎉🤗
+    </div>
     <h2>Sign Up</h2>
-    <form>
+    <form id="signup-form" autocomplete="off">
       <label>И-мэйл:
         <input type="email" name="email" required>
       </label>
@@ -227,6 +244,19 @@
       <button type="submit">Бүртгүүлэх</button>
     </form>
   </section>
+
+  <script>
+    // Sign Up form submission handler
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent real submission
+
+      // Hide the form
+      this.style.display = 'none';
+
+      // Show the success message
+      document.getElementById('success-message').style.display = 'block';
+    });
+  </script>
 
 </body>
 </html>
