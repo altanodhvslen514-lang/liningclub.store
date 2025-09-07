@@ -1,4 +1,4 @@
-nolook<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,7 +10,7 @@ nolook<!DOCTYPE html>
       font-family: Arial, sans-serif;
       background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
       color: #000;
-    }  
+    }
 
     header {
       display: flex;
@@ -101,6 +101,54 @@ nolook<!DOCTYPE html>
       100% { transform: translateY(0px); }
     }
 
+    /* Registration form styles */
+    #signup {
+      max-width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #b3e5fc44;
+      padding: 32px;
+    }
+
+    #signup h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0277bd;
+    }
+
+    #signup label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    #signup input {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 15px 0;
+      border: 1px solid #b3e5fc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    #signup button {
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 25px;
+      background: #0277bd;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #signup button:hover {
+      background: #015684;
+    }
+
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
@@ -118,12 +166,11 @@ nolook<!DOCTYPE html>
 
   <header>
     <div class="logo">
-      <img src="logo.png" alt="Li-Ning Logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Li-Ning_logo.svg/512px-Li-Ning_logo.svg.png" alt="Li-Ning Logo">
       Li-Ning Club
     </div>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="dashboard.html">Dashboard</a>
+      <a href="#">Home</a>
       <a href="#">New arrivals</a>
       <a href="#">Store</a>
     </nav>
@@ -133,35 +180,32 @@ nolook<!DOCTYPE html>
     <div class="hero-text">
       <h1>Li-Ning<br>Jimmy Butler 3</h1>
       <div class="buttons">
-        <a href="#" class="btn-primary">Get Start</a>
+        <a href="#signup" class="btn-primary">Get Start</a>
         <a href="#" class="btn-secondary">Buy Now</a>
       </div>
     </div>
     <img src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler Shoe">
   </section>
 
+  <!-- Registration Form Section -->
+  <section id="signup">
+    <h2>Sign Up</h2>
+    <form>
+      <label>Нэр:<br>
+        <input type="text" name="name" required>
+      </label>
+      <label>И-мэйл:<br>
+        <input type="email" name="email" required>
+      </label>
+      <label>Утасны дугаар:<br>
+        <input type="tel" name="phone" required>
+      </label>
+      <label>Гэрийн хаяг:<br>
+        <input type="text" name="address" required>
+      </label>
+      <button type="submit">Бүртгүүлэх</button>
+    </form>
+  </section>
+
 </body>
 </html>
-<!-- Registration Form Section -->
-<section id="signup" style="max-width:500px; margin:60px auto; background:#fff; border-radius:10px; box-shadow:0 0 15px #b3e5fc44; padding:32px;">
-  <h2 style="text-align:center;">Sign Up</h2>
-  <form>
-    <label>Нэр:<br>
-      <input type="text" name="name" required style="width:100%;padding:8px;margin:6px 0 15px 0;">
-    </label>
-    <label>И-мэйл:<br>
-      <input type="email" name="email" required style="width:100%;padding:8px;margin:6px 0 15px 0;">
-    </label>
-    <label>Утасны дугаар:<br>
-      <input type="tel" name="phone" required style="width:100%;padding:8px;margin:6px 0 15px 0;">
-    </label>
-    <label>Гэрийн хаяг:<br>
-      <input type="text" name="address" required style="width:100%;padding:8px;margin:6px 0 15px 0;">
-    </label>
-    <button type="submit" class="btn-primary" style="width:100%;">Бүртгүүлэх</button>
-  </form>
-</section>
-<div class="buttons">
-  <a href="#signup" class="btn-primary">Get Start</a>
-  <a href="#" class="btn-secondary">Buy Now</a>
-</div>
