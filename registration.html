@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Li-Ning Club - Бүртгэл</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
+      min-height: 100vh;
+      margin: 0;
+      color: #000;
+    }
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #b3e5fc44;
+      padding: 32px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0277bd;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0 15px 0;
+      border: 1px solid #b3e5fc;
+      border-radius: 4px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 70px;
+      resize: vertical;
+    }
+    button {
+      width: 100%;
+      padding: 12px 0;
+      border-radius: 25px;
+      background: #0277bd;
+      color: #fff;
+      border: none;
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #015684;
+    }
+    .success-message {
+      padding: 20px;
+      background: #e0f7fa;
+      color: #0277bd;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      border: 2px solid #b3e5fc;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="success-message" id="success-message">
+      Бүртгэл амжилттай 🎉🤗
+    </div>
+    <h2>Бүртгүүлэх</h2>
+    <form id="signup-form" autocomplete="off">
+      <label>И-мэйл:
+        <input type="email" name="email" required>
+      </label>
+      <label>Утасны дугаар:
+        <input type="tel" name="phone" required>
+      </label>
+      <label>Нэр:
+        <input type="text" name="firstname" required>
+      </label>
+      <label>Овог:
+        <input type="text" name="lastname" required>
+      </label>
+      <label>Нууц үг:
+        <input type="password" name="password" required>
+      </label>
+      <label>Хот / Аймаг:
+        <input type="text" name="city" required>
+      </label>
+      <label>Дүүрэг:
+        <input type="text" name="district" required>
+      </label>
+      <label>Гэрийн хаяг:
+        <input type="text" name="address" required>
+      </label>
+      <label>Дэлгэрэнгүй хариулах:
+        <textarea name="details" placeholder="Дэлгэрэнгүй мэдээлэл бичнэ үү..."></textarea>
+      </label>
+      <button type="submit">Бүртгүүлэх</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      this.style.display = 'none';
+      document.getElementById('success-message').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
