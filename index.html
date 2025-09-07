@@ -1,153 +1,98 @@
 <!DOCTYPE html>
-<html lang="mn">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Li-Ning Club - Home</title>
+  <title>Li-Ning Club</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: linear-gradient(to bottom right, #e1f5fe, #b3e5fc);
-      color: #222;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #b3e5fc, #e1f5fe);
+      color: #000;
     }
     header {
-      background: #0277bd;
-      color: #fff;
-      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 20px 50px;
     }
     .logo {
       display: flex;
       align-items: center;
-      font-size: 24px;
-      font-weight: 600;
-      letter-spacing: 1px;
+      font-weight: bold;
+      font-size: 18px;
     }
     .logo img {
-      height: 32px;
-      margin-right: 10px;
+      height: 25px;
+      margin-right: 8px;
     }
     nav a {
-      margin: 0 18px;
-      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
+      color: #000;
       font-weight: 500;
-      font-size: 18px;
-      transition: 0.2s;
-    }
-    nav a:hover {
-      text-decoration: underline;
     }
     .hero {
-      text-align: center;
-      padding: 40px 10px 25px 10px;
-    }
-    .hero h1 {
-      font-size: 48px;
-      margin: 0 0 10px 0;
-      color: #0277bd;
-      letter-spacing: 2px;
-    }
-    .hero p {
-      font-size: 20px;
-      color: #555;
-      margin-bottom: 8px;
-    }
-    .products-section {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 25px 10px 60px 10px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-    .product-card {
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 2px 16px #b3e5fc77;
-      width: 270px;
-      transition: 0.2s;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .product-card:hover {
-      box-shadow: 0 4px 28px #0277bd55;
-      transform: translateY(-8px) scale(1.03);
-    }
-    .product-img {
-      width: 100%;
-      height: 210px;
-      object-fit: cover;
-      background: #f5fafd;
-      border-bottom: 1px solid #b3e5fc44;
-    }
-    .product-info {
-      padding: 16px 18px 22px 18px;
-      text-align: center;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
       justify-content: space-between;
+      align-items: center;
+      padding: 50px;
     }
-    .product-name {
-      font-size: 21px;
+    .hero-text {
+      max-width: 500px;
+    }
+    .hero-text h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    .buttons a {
+      display: inline-block;
+      padding: 12px 25px;
+      border-radius: 25px;
+      margin-right: 15px;
       font-weight: bold;
-      color: #0277bd;
-      margin-bottom: 8px;
-      min-height: 46px;
+      text-decoration: none;
+      transition: 0.3s;
     }
-    .product-desc {
-      color: #444;
-      font-size: 15px;
-      min-height: 37px;
-      margin-bottom: 14px;
+    .btn-primary {
+      background: #fff;
+      color: #000;
+      border: 2px solid #000;
     }
-    .product-price {
-      color: #009688;
-      font-size: 20px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .buy-btn {
-      background: #0277bd;
+    .btn-primary:hover {
+      background: #000;
       color: #fff;
-      border: none;
-      border-radius: 18px;
-      padding: 9px 0;
-      width: 100%;
-      font-size: 17px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 7px;
-      transition: 0.2s;
     }
-    .buy-btn:hover {
-      background: #015684;
+    .btn-secondary {
+      background: #e0f7fa;
+      color: #000;
+      border: 2px solid transparent;
     }
-    @media (max-width: 800px) {
-      .products-section {
-        gap: 18px;
-      }
-      .product-card {
-        width: 92vw;
-        max-width: 330px;
-      }
-      header {
+    .btn-secondary:hover {
+      background: #000;
+      color: #fff;
+    }
+    .hero img {
+      max-width: 450px;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    @media (max-width: 768px) {
+      .hero {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px 15px;
+        text-align: center;
       }
-      .logo {
-        font-size: 19px;
-      }
-      nav a {
-        font-size: 15px;
+      .hero img {
+        margin-top: 30px;
+        width: 90%;
       }
     }
   </style>
@@ -159,78 +104,20 @@
       Li-Ning Club
     </div>
     <nav>
-      <a href="home.html" style="text-decoration:underline;">Home</a>
+      <a href="#">Home</a>
       <a href="#">New arrivals</a>
       <a href="#">Store</a>
-      <a href="registration.html">Sign Up</a>
-      <a href="login.html">Log in</a>
     </nav>
   </header>
-  <div class="hero">
-    <h1>Li-Ning Хувцас & Пүүз</h1>
-    <p>Загварлаг, чанартай, шинэлэг сонголтуудыг эндээс!</p>
-  </div>
-  <section class="products-section">
-    <!-- Пүүз -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler 3">
-      <div class="product-info">
-        <div class="product-name">Jimmy Butler 3</div>
-        <div class="product-desc">Өндөр зэрэглэлийн сагсан бөмбөгийн пүүз.</div>
-        <div class="product-price">₮329,000</div>
-        <button class="buy-btn">Сагслах</button>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Li-Ning<br>Jimmy Butler 3</h1>
+      <div class="buttons">
+        <a href="registration.html" class="btn-primary">Get Start</a>
+        <a href="#" class="btn-secondary">Buy Now</a>
       </div>
     </div>
-    <!-- Хөнгөн куртик -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/6Nw7p8j/lining-jacket.png" alt="Li-Ning Jacket">
-      <div class="product-info">
-        <div class="product-name">Li-Ning Хөнгөн Куртик</div>
-        <div class="product-desc">Ямар ч улиралд тохирох, эвтэйхэн, загварлаг.</div>
-        <div class="product-price">₮199,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- TRS-1 пүүз -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/2hXG4kK/lining-trs1.png" alt="Li-Ning TRS-1">
-      <div class="product-info">
-        <div class="product-name">TRS-1 Пүүз</div>
-        <div class="product-desc">Хөнгөн, удаан эдэлгээтэй гүйлтийн пүүз.</div>
-        <div class="product-price">₮259,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Хөлбөмбөгийн өмд -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/YQ5kLh7/lining-pants.png" alt="Li-Ning Pants">
-      <div class="product-info">
-        <div class="product-name">Li-Ning Хөлбөмбөгийн өмд</div>
-        <div class="product-desc">Спортын болон өдөр тутмын өмсгөл.</div>
-        <div class="product-price">₮109,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Хөвөн цамц -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/3pBrq1L/lining-tshirt.png" alt="Li-Ning T-shirt">
-      <div class="product-info">
-        <div class="product-name">Li-Ning T-Shirt</div>
-        <div class="product-desc">Байгальд ээлтэй, хөвөн даавуун материалтай.</div>
-        <div class="product-price">₮59,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
-    <!-- Эмэгтэй пүүз -->
-    <div class="product-card">
-      <img class="product-img" src="https://i.ibb.co/1m4ptjB/lining-womenshoe.png" alt="Li-Ning Women's Sneaker">
-      <div class="product-info">
-        <div class="product-name">Li-Ning Эмэгтэй Пүүз</div>
-        <div class="product-desc">Зөөлөн ултай, хөнгөн, өдөр тутмын өмсгөл.</div>
-        <div class="product-price">₮199,000</div>
-        <button class="buy-btn">Сагслах</button>
-      </div>
-    </div>
+    <img src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler Shoe">
   </section>
 </body>
 </html>
