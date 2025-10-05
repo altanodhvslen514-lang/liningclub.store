@@ -42,7 +42,6 @@
       transition: 0.2s;
     }
 
-    /* Hamburger icon */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -60,7 +59,6 @@
       transition: 0.3s;
     }
 
-    /* Responsive styles */
     @media (max-width: 900px) {
       header {
         padding: 20px 15px;
@@ -161,7 +159,6 @@
         width: 90%;
       }
     }
-    /* nav-г гарны цохилтоор хаах overlay */
     .nav-overlay {
       display: none;
       position: fixed;
@@ -177,7 +174,7 @@
 <body>
   <header>
     <div class="logo">
-      <img src="logo.png" alt="logo.png">
+      <img src="assets/logo.png" alt="Li-Ning Club Logo">
       Li-Ning Club
     </div>
     <div class="hamburger" id="hamburger" aria-label="Цэс нээх" tabindex="0">
@@ -194,6 +191,7 @@
     </nav>
     <div class="nav-overlay" id="navOverlay"></div>
   </header>
+
   <section class="hero">
     <div class="hero-text">
       <h1>Li-Ning<br>Jimmy Butler 3</h1>
@@ -204,8 +202,8 @@
     </div>
     <img src="https://i.ibb.co/g9x7FZf/jimmy-butler-shoe.png" alt="Jimmy Butler Shoe">
   </section>
+
   <script>
-    // Hamburger menu toggle
     const hamburger = document.getElementById('hamburger');
     const mainNav = document.getElementById('mainNav');
     const navOverlay = document.getElementById('navOverlay');
@@ -225,7 +223,6 @@
     });
     navOverlay.addEventListener('click', closeNav);
 
-    // Escape key to close nav
     document.addEventListener('keydown', function(e) {
       if ((e.key === 'Escape' || e.key === 'Esc') && mainNav.classList.contains('open')) {
         closeNav();
